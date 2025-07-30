@@ -26,7 +26,7 @@
 		ResultSet rs=null;
 		try{		
 			Class.forName("com.mysql.jdbc.Driver");
-			conn=DriverManager.getConnection("jdbc:mysql://localhost:3306/drugdatabase","root","1234");
+			conn=DriverManager.getConnection("jdbc:mysql://drugdatabase.c3iw8eosk08q.ap-south-1.rds.amazonaws.com:3306/drugdatabase","root","Admin#2417");
 			ps1=conn.prepareStatement(query1);
 			ps1.setString(1,uid1);
 			rs=ps1.executeQuery();
