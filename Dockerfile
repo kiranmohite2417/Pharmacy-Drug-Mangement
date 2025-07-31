@@ -12,7 +12,7 @@ ENV COMPANY_TYPE IT
 ENV COMPANY_EMAIL kiranmohite2417@gmail.com
 
 # Copy the WAR file into the Tomcat webapps directory
-COPY target/Pharmacy-Drug-Mangement.war /usr/local/tomcat/webapps/
+COPY target/Pharmacy-Drug-Mangement-1.0.war /usr/local/tomcat/webapps/
 # Expose port 8080 for the Tomcat server
 EXPOSE 8080
 
