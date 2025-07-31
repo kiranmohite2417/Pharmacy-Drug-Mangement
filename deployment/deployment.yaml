@@ -1,0 +1,44 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  labels:
+    app: java
+    app.kubernetes.io/instance: java
+  name: java-app-deployment
+  namespace: default
+spec:
+  minReadySeconds: 10
+  replicas: 6
+  selector:
+    matchLabels:
+      app: java
+  strategy:
+    rollingUpdate:
+      maxSurge: 2
+      maxUnavailable: 0
+    type: RollingUpdate
+  template:
+    metadata:
+      labels:
+        app: java
+    spec:
+      containers:
+        - image: 993178286287.dkr.ecr.ap-south-1.amazonaws.com/pharmacy-drug-mangement:latest
+          name: java
+          ports:
+            - containerPort: 8080
+---
+# Service YAML
+apiVersion: v1
+kind: Service
+metadata:
+  name: java-app-service
+spec:
+  selector:
+    app: java
+  ports:
+    - protocol: TCP
+      port: 80
+      targetPort: 8080
+  type: LoadBalancer
+
