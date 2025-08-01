@@ -1,5 +1,4 @@
 # Use the official Tomcat image as the base image
-FROM tomcat:9.0-jdk11
 
 # Labels instead of deprecated MAINTAINER
 LABEL maintainer="CloudContainer Technologies Private Limited"
