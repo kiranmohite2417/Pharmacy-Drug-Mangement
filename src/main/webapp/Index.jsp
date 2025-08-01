@@ -1,0 +1,26 @@
+<%@ page contentType="text/html;charset=ISO-8859-1" language="java" %>
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="ISO-8859-1">
+    <title>Index</title>
+    <link rel="stylesheet" href="css/Index.css">
+</head>
+<body>
+    <div class="container">
+        <div class="indexbox">
+            <h2>Drug Store Management</h2>
+            <form action="Login.jsp">
+                <button class="button1">Login</button>
+            </form>
+            <form action="Register.jsp">
+                <button class="button1">Register As Customer</button>
+            </form>
+            <form action="SellerRegister.jsp">
+                <button class="button1">Register As Vendor</button>
+            </form>
+        </div>
+    </div>
+</body>
+</html>
+
