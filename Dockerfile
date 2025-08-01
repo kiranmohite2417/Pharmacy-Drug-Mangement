@@ -17,7 +17,7 @@ ENV APP_TYPE=JAVA \
 RUN rm -rf $CATALINA_HOME/webapps/*
 
 # Copy the built WAR file into Tomcat webapps directory
-COPY target/Pharmacy-Drug-Mangement-1.0.war $CATALINA_HOME/webapps/ROOT.war
+COPY target/Pharmacy-Drug-Management.war $CATALINA_HOME/webapps/ROOT.war
 
 # Expose port 8080 for Tomcat
 EXPOSE 8080
